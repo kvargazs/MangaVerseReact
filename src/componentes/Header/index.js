@@ -2,6 +2,7 @@ import Logo from '../Logo' //importando a função da logo
 import OpcoesHeader from '../OpcoesHeader';
 import IconesHeader from '../IconesHeader'
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const HeaderContainer = styled.header`
         background-color: #fff;
@@ -12,7 +13,9 @@ const HeaderContainer = styled.header`
 function Header() {
     return(
         <HeaderContainer>
-            <Logo/> {/*trazendo a logo*/}
+            <Link to="/">
+                <Logo/> {/*trazendo a logo*/}
+            </Link>
             <OpcoesHeader/>
             <IconesHeader/>
         </HeaderContainer>
